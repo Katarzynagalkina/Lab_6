@@ -27,7 +27,7 @@ public class Connector {
     }
 
 
-    public  Pupil [] read() throws IOException, ClassNotFoundException {
+    public  Pupil [] read() throws IOException {
             FileInputStream in = new FileInputStream(filename);
             try (ObjectInputStream oin = new ObjectInputStream(in)) {
                 Pupil[] res = new Pupil[5];

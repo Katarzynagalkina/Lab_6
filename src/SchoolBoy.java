@@ -15,7 +15,8 @@ public class SchoolBoy extends Pupil implements Serializable {
     private int getAverageMark(){return this.averageMark;}
 
     public void showInformation(Locale locale)throws UnsupportedEncodingException {
-        super.showInformation(locale);
-        System.out. println(", schoolboy with average Mark " + this.averageMark);
+        super.showInformation();
+        System.out.print(new String (bundle.getString("schoolboy_with_average_mark").getBytes("ISO-8859-1"), "Windows-1251"));
+
     }
 }

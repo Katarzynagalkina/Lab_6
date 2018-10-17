@@ -13,10 +13,10 @@ public class Student extends Pupil implements Serializable {
 
     public boolean hasGrants(){return this.hasGrants;}
 
-    public void showInformation(Locale locale) throws UnsupportedEncodingException {
-        super.showInformation(locale);
-        System.out. print(", student");
-        if(this.hasGrants) System.out. println(" with grants");
-        else System.out. println(" without grants");
+    public void showInformation() throws UnsupportedEncodingException {
+        super.showInformation();
+        System.out.print(new String (bundle.getString("student").getBytes("ISO-8859-1"), "Windows-1251"));
+        if(this.hasGrants) System.out.print(new String (bundle.getString("with_grants").getBytes("ISO-8859-1"), "Windows-1251"));
+        else System.out.print(new String (bundle.getString("without_grants").getBytes("ISO-8859-1"), "Windows-1251"));
     }
 }
